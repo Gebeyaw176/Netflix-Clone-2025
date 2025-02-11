@@ -1,6 +1,8 @@
 
 import './App.css'
 
+import Home from './pages/Home/Home'
+
 function App() {
   
 
@@ -8,7 +10,8 @@ function App() {
     <>
       
        <div>
-        <h1>Hi boddy</h1>
+        <Home/>
+        
        </div> 
     </>
   )
