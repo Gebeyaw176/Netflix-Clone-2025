@@ -1,47 +1,39 @@
-.footer_outer_container {
-  background-color: #111;
-  color: grey;
+.footer_icons {
+  width: 10%;
   display: flex;
   justify-content: center;
-} 
-.footer_inner_container {
-  width: 60%; 
-  /* background-color: red; / / Uncomment for debugging */
-} 
-.footer_icons {
-  /* background-color: blue; / / Uncomment for debugging */
-  width: 12%;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 10px;
+  gap: 15px;
+  margin-left: 80px;
   color: #fff;
-} /* Footer Data Section */
-.footer_data {
-  display: flex;
-  justify-content: space-between;
-} /* Styling for Footer Lists */
-.footer_data ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 12vh; /* background-color: blue; / / Uncomment for debugging */
-} /* Footer List Items */
-.footer_data ul li {
-  cursor: pointer;
-} /* Service Code Button */
+}
+.inc {
+  margin-left: 80px;
+}
+p {
+  margin-left: 80px;
+}
 .service_code {
   display: flex;
   align-items: center;
   justify-content: center;
   border: #fff 1px solid;
-  width: 15%;
-  margin: 10px 0;
-  cursor: pointer;
-} /* Copyright Text */
-.copy-write{
-  font-size: 12px;
-  margin-bottom: 10px;
+  width: fit-content;
+  margin: 20px auto;
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+@media (max-width: 576px) {
+  For small screens .center {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

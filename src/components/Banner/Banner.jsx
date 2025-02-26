@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import axios from "../../utils/axios"
-import requests from '../../utils/requests';
-import "./Banner.css"
+import React, { useEffect, useState } from "react";
+import axios from "../../utils/axios";
+import requests from "../../utils/requests";
+import "./Banner.css";
 const Banner = () => {
-    const [movie,setmovie]=useState([]);
-    useEffect(()=>{
-        (async()=>{
-            try{
-                const request = await axios.get(requests.fetchNetflixOriginals);
-                // console.log(requests);
-                setmovie(request.data.results[Math.floor(Math.random()*request.data.results.length)
-
-                ])
-            }catch (error){
-                console.log("error",error);
-            }
-        }
-
-        )()
-    },[]);
-    function truncate(str,n){
-        return str?.length>n?str.substr(0,n-1)+'...':str;
-    }
+  const [movie, setmovie] = useState([]);
+  useEffect(() => {
+    (async () => {
+      try {
+        const request = await axios.get(requests.fetchNetflixOriginals);
+        // console.log(requests);
+        setmovie(
+          request.data.results[
+            Math.floor(Math.random() * request.data.results.length)
+          ]
+        );
+      } catch (error) {
+        console.log("error", error);
+      }
+    })();
+  }, []);
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
   return (
     <div
       className="banner"
@@ -42,17 +42,9 @@ const Banner = () => {
         </div>
         <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
       </div>
-      <div className="banner_fadeBottom"/>
+      <div className="banner_fadeBottom" />
     </div>
-  )
+  );
 };
 
-export default Banner
-
-
-
-
-
-
-
-
+export default Banner;

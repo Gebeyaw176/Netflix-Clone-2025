@@ -59,10 +59,11 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
             }`}
             alt={movie.name}
             className={`row_poster ${isLargeRow && "row_posterLarge"}`} // Added space between classes
+            onError={(e) => (e.target.style.display = "none")}
           />
         ))}
       </div>
-      <div style={{ padding: "40px" }}>
+      <div style={{ padding: "10px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div>
     </div>
